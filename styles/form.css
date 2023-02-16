@@ -1,0 +1,144 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Body Styles */
+
+html {
+    background-image: url("https://media.istockphoto.com/vectors/dog-bone-dog-paw-doodle-seamless-pattern-wallpaper-background-vector-id837544344?k=20&m=837544344&s=170667a&w=0&h=mA-CAYoeAouMkmoLm2SoAtORFbiRz2qEpNWvAN_BKBc=");
+    -webkit-filter: invert();
+    filter: invert();
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    -webkit-filter: invert();
+    filter: invert();
+    background-color: white;
+    margin: auto;
+    padding: 14px;
+    max-width: 70%;
+    max-height: 70%;
+}
+
+header {
+    margin-bottom: 14px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.goodLuck {
+    margin-bottom: 0;
+    background: linear-gradient(45deg, #09009f, #00ff95 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: rgba(0, 0, 0, 0.09) 2px 2px 1px;
+}
+
+/* Image Styles */
+
+.dogImage {
+    display: block;
+    margin: auto auto 14px;
+    height: 300px;
+}
+
+.goodLuckImage {
+    display: block;
+    margin: 14px auto auto;
+    border-style: solid;
+    border-width: 25px;
+    border-image: url("https://www.onlygfx.com/wp-content/uploads/2020/01/gold-picture-frame-3-1536x984.png") 50;
+    rotate: 2.5deg;
+    transform: rotateX(30deg) translateZ(50px);
+    perspective: 600px;
+}
+
+/* Form Layout Styles */
+
+div.formRow {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    margin: 7px 0;
+}
+
+div.formRow > * {
+    -webkit-flex: 1 1 150px;
+    flex: 1 1 150px;
+}
+
+form#signUp {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+form#signUp > fieldset {
+    border: 2px #00ff95 dashed;
+    border-radius: 30px;
+    -webkit-flex: 1 1 300px;
+    flex: 1 1 300px;
+    font-size: 0.85em;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Legend Styles */
+
+legend {
+    background-color: #09009f;
+    color: white;
+    padding: 5px;
+}
+
+/* Text Area Styles */
+
+textarea {
+    margin-top: 10px;
+    height: 100px;
+    width: 95%;
+}
+
+/* Spinner Styles */
+
+div.formRow > input#boardingDays {
+    -webkit-flex: 0 0 50px;
+    flex: 0 0 50px;
+}
+
+/* Form Button Styles */
+
+div#button {
+    text-align: center;
+    width: 100%;
+}
+
+input[type=submit], input[type=reset] {
+    font-size: 1.2em;
+    padding: 5px;
+    margin-top: 15px;
+}
+
+/* Validation Styles */
+
+input:focus, select:focus, textarea:focus {
+    background-color: rgb(220, 255, 220);
+}
+
+input#name:focus:valid,
+input#zip:focus:valid,
+input#phone:focus:valid,
+input#mail:focus:valid {
+    background: rgb(220, 255, 220) url("../images/rb_valid.png") bottom right / contain no-repeat;
+}
+
+input#name:focus:invalid,
+input#zip:focus:invalid,
+input#phone:focus:invalid,
+input#mail:focus:invalid {
+    background: rgb(255, 232, 233) url("../images/rb_invalid.png") bottom right / contain no-repeat;
+}

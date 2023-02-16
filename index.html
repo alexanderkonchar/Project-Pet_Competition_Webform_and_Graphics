@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pet Competition</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<header>
+    <h1>As of Yet Unnamed Pet Competition</h1>
+    <img class="dogImage"
+         src="https://images.unsplash.com/photo-1655648340915-019ee5a3fb2a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=300&q=80"
+         usemap="#map"
+         alt="A black and white dog sitting on sand looking at the camera">
+    <map name="map">
+        <area target="_blank" alt="Dog - Wikipedia" title="Dog - Wikipedia" href="https://en.m.wikipedia.org/wiki/Dog" coords="294,237,154,105" shape="rect">
+        <area target="_blank" alt="Sand - Wikipedia" title="Sand - Wikipedia" href="https://en.m.wikipedia.org/wiki/Sand" coords="0,125,1,297,446,297,449,105,309,109,301,242,149,243,140,119" shape="poly">
+    </map>
+    Welcome to the ultimate pet competition! If you're a proud pet owner, you know that your furry (or scaly, or
+    feathery) friend is the best in the world. And now it's time to prove it! Our website is the perfect place to
+    showcase your beloved pet's unique talents and personality, and compete against other pets from all around the
+    world. Whether your pet is a champion at performing tricks, a master of agility, or simply the cutest thing you've
+    ever seen, we have a competition for them. Join our community of pet lovers and show off your furry (or
+    not-so-furry) family member to the world!
+</header>
+<body>
+<form id="signUp" action="https://icarus.cs.weber.edu/~linda/cs2350/submit_pet1.php" method="post">
+    <fieldset id="petInfo">
+        <legend>Pet Information</legend>
+        <div class="formRow">
+            <label for="petName">
+                What's Your Pet's Name
+            </label>
+            <input type="text" name="petName" id="petName" placeholder="name of your pet">
+        </div>
+
+        <div class="formRow">
+            <label for="birthDate">
+                What's Your Pet's Birthdate?
+            </label>
+            <input type="date" name="birthDate" id="birthDate">
+        </div>
+
+        <div class="formRow">
+            <label>What is Your Pet?</label>
+            <fieldset class="optGroup">
+                <input type="radio" name="cat" id="cat" value="Cat">
+                <label for="cat">Cat</label>
+                <input type="radio" name="dog" id="dog" value="Dog">
+                <label for="dog">Dog</label>
+                <input type="radio" name="reptile" id="reptile" value="Reptile">
+                <label for="reptile">Reptile</label>
+                <input type="radio" name="bird" id="bird" value="Bird">
+                <label for="bird">Bird</label>
+                <input type="radio" name="rodent" id="rodent" value="Rodent">
+                <label for="rodent">Rodent</label>
+            </fieldset>
+        </div>
+
+        <label for="petBio">Tell us a little bit about your pet</label>
+        <textarea name="petBio" id="petBio"></textarea>
+    </fieldset>
+
+    <fieldset id="contactInfo">
+        <legend>Contact Information</legend>
+        <div class="formRow">
+            <label for="contactName">
+                Name*
+            </label>
+            <input type="text" name="contactName" id="contactName" placeholder="first and last name" required>
+        </div>
+
+        <div class="formRow">
+            <label for="contactPhone">
+                Phone Number*
+            </label>
+            <input type="tel" name="contactPhone" id="contactPhone" placeholder="(nnn) nnn-nnnn"
+                   pattern="^\d{10}$|^(\d3\s*)?\d{3}[\s-]?\d{4}$" required>
+        </div>
+
+        <div class="formRow">
+            <label for="contactEmail">
+                Email*
+            </label>
+            <input type="email" name="contactEmail" id="contactEmail" required>
+        </div>
+    </fieldset>
+
+    <fieldset id="competitionEntry">
+        <legend>Competition Entry</legend>
+
+        <div class="formRow">
+            <label for="competitionType">
+                Which competition(s) are you entering?
+            </label>
+            <fieldset class="optGroup" id="competitionType">
+                <input type="checkbox" name="singing pet competition" id="singing pet competition"
+                       value="singing pet competition">
+                <label for="singing pet competition">singing pet competition</label>
+                <input type="checkbox" name="cutest pet competition" id="cutest pet competition"
+                       value="cutest pet competition">
+                <label for="cutest pet competition">cutest pet competition</label>
+                <input type="checkbox" name="pet tricks competition" id="pet tricks competition"
+                       value="pet tricks competition">
+                <label for="pet tricks competition">pet tricks competition</label>
+            </fieldset>
+        </div>
+
+        <div class="formRow">
+            <label for="entryName">
+                Entry Name
+            </label>
+            <input type="text" name="entryName" id="entryName">
+        </div>
+
+        <div class="formRow">
+            <label for="trickType">
+                If you selected the tricks competition, which tricks will your pet be performing?
+                <br> {Select all that apply}
+            </label>
+            <select name="trickType" id="trickType" size="4" multiple>
+                <option value="obstacle course">obstacle course</option>
+                <option value="frisbee/ball/other catching">frisbee/ball/other catching</option>
+                <option value="roll over/play dead">roll over/play dead</option>
+                <option value="other">other</option>
+            </select>
+        </div>
+
+    </fieldset>
+
+    <fieldset id="boardingInfo">
+        <legend>Boarding Information</legend>
+        <div class="formRow">
+            <label for="boardingDays">How many days of boarding?</label>
+            <input type="number" name="boardingDays" id="boardingDays" min="0" max="3">
+        </div>
+
+        <div class="formRow">
+            <label for="kennelSize">Kennel Size <small>(in)</small> </label>
+            0 inches
+            <input type="range" name="kennelSize" id="kennelSize" step="8" min="0" max="48">
+            48 inches
+        </div>
+    </fieldset>
+
+    <div id="button">
+        <input type="submit" value="Submit Pet for Approval">
+        <input type="reset" value="Cancel">
+    </div>
+
+</form>
+
+<img class="goodLuckImage"
+     src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80"
+     height="300vh"
+     alt="A furry friend wishes you good luck">
+<h1 class="goodLuck">Good Luck!</h1>
+</body>
+</html>
