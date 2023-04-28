@@ -5,14 +5,14 @@
 
 html {
     background-image: url("https://media.istockphoto.com/vectors/dog-bone-dog-paw-doodle-seamless-pattern-wallpaper-background-vector-id837544344?k=20&m=837544344&s=170667a&w=0&h=mA-CAYoeAouMkmoLm2SoAtORFbiRz2qEpNWvAN_BKBc=");
-    -webkit-filter: invert();
-    filter: invert();
+    -webkit-filter: invert(1);
+    filter: invert(1);
     font-family: 'Roboto', sans-serif;
 }
 
 body {
-    -webkit-filter: invert();
-    filter: invert();
+    -webkit-filter: invert(1);
+    filter: invert(1);
     background-color: white;
     margin: auto;
     padding: 14px;
@@ -50,8 +50,7 @@ h1 {
     border-style: solid;
     border-width: 25px;
     border-image: url("https://www.onlygfx.com/wp-content/uploads/2020/01/gold-picture-frame-3-1536x984.png") 50;
-    rotate: 2.5deg;
-    transform: rotateX(30deg) translateZ(50px);
+    transform: rotateX(30deg) translateZ(50px) rotate(2.5deg);
     perspective: 600px;
 }
 

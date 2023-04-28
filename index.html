@@ -5,15 +5,32 @@
     <title>Pet Competition</title>
     <link rel="stylesheet" href="styles/form.css">
 </head>
+<body>
 <header>
     <h1>As of Yet Unnamed Pet Competition</h1>
     <img class="dogImage"
          src="https://images.unsplash.com/photo-1655648340915-019ee5a3fb2a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=300&q=80"
          usemap="#map"
          alt="A black and white dog sitting on sand looking at the camera">
+
+    <!--    I had some problems with the poly tool and the validator, so I went with rectangles instead-->
+    <!--    <map name="map">-->
+    <!--        <area alt="Dog - Wikipedia" title="Dog - Wikipedia" href="https://en.m.wikipedia.org/wiki/Dog"-->
+    <!--              coords="246,104 265,105 280,113 283,122 274,123 266,151 256,158 244,160 237,180 243,214 263,229 256,233 168,238 156,217 155,188 186,145 215,120 229,107"-->
+    <!--              shape="poly">-->
+    <!--        <area alt="Sand - Wikipedia" title="Sand - Wikipedia" href="https://en.m.wikipedia.org/wiki/Sand"-->
+    <!--              coords="287,113 447,114 447,298 1,299 2,136 198,108 208,116 149,189 153,243 271,240 269,223 247,209 244,181 270,155 287,131"-->
+    <!--              shape="poly">-->
+    <!--    </map>-->
     <map name="map">
-        <area target="_blank" alt="Dog - Wikipedia" title="Dog - Wikipedia" href="https://en.m.wikipedia.org/wiki/Dog" coords="294,237,154,105" shape="rect">
-        <area target="_blank" alt="Sand - Wikipedia" title="Sand - Wikipedia" href="https://en.m.wikipedia.org/wiki/Sand" coords="0,125,1,297,446,297,449,105,309,109,301,242,149,243,140,119" shape="poly">
+        <area alt="Sand - Wikipedia" title="Sand - Wikipedia" href="https://en.m.wikipedia.org/wiki/Sand"
+              coords="4,116,148,302" shape="rect">
+        <area alt="Sand - Wikipedia" title="Sand - Wikipedia" href="https://en.m.wikipedia.org/wiki/Sand"
+              coords="292,112,450,321" shape="rect">
+        <area alt="Sand - Wikipedia" title="Sand - Wikipedia" href="https://en.m.wikipedia.org/wiki/Sand"
+              coords="120,243,306,317" shape="rect">
+        <area alt="Dog - Wikipedia" title="Dog - Wikipedia" href="https://en.m.wikipedia.org/wiki/Dog"
+              coords="152,104,286,239" shape="rect">
     </map>
     Welcome to the ultimate pet competition! If you're a proud pet owner, you know that your furry (or scaly, or
     feathery) friend is the best in the world. And now it's time to prove it! Our website is the perfect place to
@@ -22,7 +39,6 @@
     ever seen, we have a competition for them. Join our community of pet lovers and show off your furry (or
     not-so-furry) family member to the world!
 </header>
-<body>
 <form id="signUp" action="https://icarus.cs.weber.edu/~linda/cs2350/submit_pet1.php" method="post">
     <fieldset id="petInfo">
         <legend>Pet Information</legend>
@@ -89,19 +105,19 @@
         <legend>Competition Entry</legend>
 
         <div class="formRow">
-            <label for="competitionType">
+            <div>
                 Which competition(s) are you entering?
-            </label>
+            </div>
             <fieldset class="optGroup" id="competitionType">
-                <input type="checkbox" name="singing pet competition" id="singing pet competition"
+                <input type="checkbox" name="singing pet competition" id="singing-pet-competition"
                        value="singing pet competition">
-                <label for="singing pet competition">singing pet competition</label>
-                <input type="checkbox" name="cutest pet competition" id="cutest pet competition"
+                <label for="singing-pet-competition">singing pet competition</label>
+                <input type="checkbox" name="cutest pet competition" id="cutest-pet-competition"
                        value="cutest pet competition">
-                <label for="cutest pet competition">cutest pet competition</label>
-                <input type="checkbox" name="pet tricks competition" id="pet tricks competition"
+                <label for="cutest-pet-competition">cutest pet competition</label>
+                <input type="checkbox" name="pet tricks competition" id="pet-tricks-competition"
                        value="pet tricks competition">
-                <label for="pet tricks competition">pet tricks competition</label>
+                <label for="pet-tricks-competition">pet tricks competition</label>
             </fieldset>
         </div>
 
@@ -143,7 +159,7 @@
     </fieldset>
 
     <div id="button">
-        <input type="submit" value="Submit Pet for Approval">
+        <input type="submit" name="submit">
         <input type="reset" value="Cancel">
     </div>
 
@@ -151,7 +167,7 @@
 
 <img class="goodLuckImage"
      src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80"
-     height="300vh"
+     height="300"
      alt="A furry friend wishes you good luck">
 <h1 class="goodLuck">Good Luck!</h1>
 </body>
